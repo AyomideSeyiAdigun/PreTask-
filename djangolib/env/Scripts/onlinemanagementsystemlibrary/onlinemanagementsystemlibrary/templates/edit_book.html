@@ -1,0 +1,45 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Title</title>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>  
+<body>  
+
+<div class="container">
+    <form method="POST"> {% csrf_token %}
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">Book Name</i></label>
+            <input type="text" class="form-control mt-2" name="name" placeholder="{{book.name}}" >
+        </div>
+    </div>
+ 
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">Author Name</i></label>
+            <input type="text" class="form-control mt-2" name="author" placeholder="{{book.author}}"  >
+        </div>
+    </div>
+ 
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">ISBN Number</i></label>
+            <input type="number" class="form-control mt-2" name="isbn" placeholder="{{book.isbn}}"  >
+        </div>
+    </div>
+ 
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">Category</i></label>
+            <input type="text" class="form-control mt-2" name="category" placeholder="{{book.category}}">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-outline-primary mt-4">Edit Book</button>
+    
+</div>
+</form>
+</body>
+</html>
+ 
